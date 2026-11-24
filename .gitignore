@@ -1,1 +1,34 @@
+cat << 'EOF' > .gitignore
+# Python & Virtual Environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment variables
 .env
+
+# Nested external repo
+llama.cpp/
+
+# Curated & Tokenized Datasets
+train.jsonl
+test.jsonl
+llama32_python_tokenized/
+
+# Model Weights, Checkpoints & Exports
+llama32_3b_gptq_g32/
+checkpoints/
+merged_models/
+exported_hf/
+exported_gguf/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+EOF
+# Local IDE & Logs
+.vscode/
+logs/
